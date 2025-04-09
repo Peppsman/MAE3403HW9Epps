@@ -91,7 +91,11 @@ def Main():
     app = qtw.QApplication(sys.argv)
     mw = MainWindow()
     sys.exit(app.exec())
-
+#PBE part C maybe
+    self.controller.setSupports(left_node, right_node)
+    left_load, right_load = self.controller.calculateVerticalLoads()
+    self.controller.updateNodeTooltips(left_node, right_node, left_load, right_load)
+#PBE Part C seams to work, but it doesn't change the image for the roller
 
 # endregion
 
